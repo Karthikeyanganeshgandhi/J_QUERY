@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide toggle</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        #a,#b{
+            padding: 5px;
+            text-align: center;
+            background-color: aliceblue;
+            border: solid 1px;
+        }
+        #b{
+            padding: 50px;
+            display: none;
+        }
+        #a:active{
+            background-color: red;
+        }
+    </style>
+
+    <div id="a">click me to slide toggle</div>
+    <div id="b">Event successfully completed</div>
+    
+</body>
+<script>
+    $(document).ready(function(){
+        $("#a").click(function(){
+            $("#b").slideToggle("slow")
+        })
+    })
+</script>
+</html>
